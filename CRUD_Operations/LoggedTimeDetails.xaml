@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CRUD_Operations.LoggedTimeDetails">
+    
+    <StackLayout>
+        <TableView StyleClass="tableViewStyle">
+            <TableRoot>
+                <TableSection Title="{Binding FirstName, StringFormat='Edit {0} Personal Details'} ">
+                    <EntryCell x:Name="lbl_fName" Label="First Name"  Text="{Binding FirstName}"/> 
+                    <EntryCell x:Name="lbl_lName" Label="Last Name" Text="{Binding LastName}" /> 
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13,0">
+                            <Label x:Name="lbl_id" Text="{Binding EmployeeID}" IsVisible="false" />
+                            <Label Text="Starts" VerticalOptions="Center"/>
+                            <DatePicker x:Name="lbl_date"
+                                        Date="{Binding LoggedDate}" 
+                                        Format="d MMM yyy"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand"/>
+                            <!--<DatePicker Date="{x:Static sys:DateTime.Today}" 
+                                        Format="d MMM yyy"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand"/>-->
+                        </StackLayout>
+                    </ViewCell>
+                    
+                    <ViewCell >
+                        <StackLayout Orientation="Horizontal" Margin="2.5,2.5" Padding="2.5"> 
+                            <Button Text="Save Changes"  
+                                    StyleClass="btn-primary" 
+                                    Clicked="editEmployee" 
+                                    BackgroundColor="#28a745"
+                                    TextColor="#fff"
+                                    BorderColor="#ffc107"
+                                    BorderRadius="12"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="StartAndExpand"/>
+                            <Button Text="Delete Record" 
+                                    StyleClass="btn-danger" 
+                                    Clicked="deleteEmployee"
+                                    BackgroundColor="#dc3545"
+                                    TextColor="#fff"
+                                    BorderColor="#dc3545"
+                                    BorderRadius="12"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        
+    </StackLayout>
+</ContentPage>

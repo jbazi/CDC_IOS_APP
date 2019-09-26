@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CRUD_Operations" 
+             x:Class="CRUD_Operations.MainPage">
+    
+    <StackLayout StyleId="empDetailsPage">
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Enter New Employee" 
+                    Clicked="newEmployee" 
+                    StyleClass="btn-primary"
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <ListView StyleClass="listViewCustomStyle" 
+                  x:Name="postsListView" 
+                  ItemSelected="EmpDetails" 
+                  ClassId="{Binding EmployeeID}" 
+                  Header="Welcome to CDC Time Tracker"
+                  HorizontalOptions="Center">
+            <ListView.ItemTemplate StyleClass="listViewCustomStyle">
+                <DataTemplate>
+                    <TextCell Text="{Binding FullName}"  Detail="{Binding LoggedDate}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

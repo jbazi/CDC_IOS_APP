@@ -1,0 +1,47 @@
+﻿^ContentPage {
+    background-color: #89bdd3;
+    padding: 20;
+}
+
+^StackLayout {
+    background-color: #9ad3de;
+}
+
+#empDetailsPage {
+    background-color: #9ad3de;
+    /*padding: 10;*/
+}
+
+.listViewCustomStyle,
+.tableViewStyle {
+    background-color: #e3e3e3;
+    text-align: center;
+}
+
+.btn-primary {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #006dcc;
+    border-color: #0044cc #0044cc #002a80;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+ViewCell > StackLayout > .btn-warning {
+    color: #212529 !important;
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    border-radius: 12px !important;
+}
+
+ViewCell > StackLayout > .btn-danger {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    border-radius: 12px !important;
+}
+
+^Text {
+    color: #fff;
+}
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CRUD_Operations.NewEmployee">
+    <StackLayout>
+        <TableView StyleClass="tableViewStyle">
+            <TableRoot>
+                <TableSection Title="Enter New Employee Contact Details">
+                    <EntryCell x:Name="lbl_fName" Label="First Name"  Text="Enter first name ..."/> 
+                    <EntryCell x:Name="lbl_lName" Label="Last Name" Text="Enter last name ..." /> 
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13,0">
+                            <Label Text="Starting Date" VerticalOptions="Center"/>
+                            <DatePicker x:Name="lbl_date"
+                                        Date="{x:Static sys:DateTime.Today}" 
+                                        Format="d MMM yyy"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                    <ViewCell> 
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Save Changes" 
+                                    StyleClass="btn_editEmployee btn-warning"
+                                    Clicked="newEmployeeDetails"
+                                    BackgroundColor="#d17d44"
+                                    TextColor="#e3e0c6"
+                                    HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>

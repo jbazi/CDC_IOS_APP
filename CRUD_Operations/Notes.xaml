@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CRUD_Operations.Notes">
+    <StackLayout>  
+      <Label Text="Save Your Notes:"></Label>  
+      <Entry Placeholder="Enter Notes Title" x:Name="Title"></Entry>  
+      <Entry Placeholder="Enter Notes Description" x:Name="Description"></Entry>  
+      <!--<Button Text="ADD NOTE" Clicked="OnAdd"></Button>  -->
+  
+      <Label Text="Saved Notes" VerticalOptions="End"></Label>  
+      <ListView VerticalOptions="EndAndExpand" x:Name="mylistview">  
+          <ListView.ItemTemplate>  
+              <DataTemplate>  
+                  <TextCell Text="{Binding Title}" Detail="{Binding Desc}">  
+                  </TextCell>  
+              </DataTemplate>  
+          </ListView.ItemTemplate>  
+      </ListView>  
+  </StackLayout>  
+</ContentPage>

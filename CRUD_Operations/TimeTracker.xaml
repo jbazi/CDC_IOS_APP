@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Padding="40"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CRUD_Operations.TimeTracker">
+    <StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Personal Details">
+                    <EntryCell Label="First Name" Placeholder="Enter First Name" /> 
+                    <EntryCell Label="Last Name" Placeholder="Enter Last Name" /> 
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="13,0">
+                            <Label Text="Starts" VerticalOptions="Center"/>
+                            <DatePicker Date="{x:Static sys:DateTime.Today}" 
+                                        Format="d MMM yyy"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+       
+        
+    </StackLayout>
+    
+     <!--<StackLayout>
+            <ListView x:Name="myListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding TimeLogger2.FirstName}" />
+                        <TextCell Text="{Binding TimeLogger2.LastName}" />
+                        <TextCell Text="{Binding TimeLogger2.LoggedDate}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>-->
+    
+</ContentPage>

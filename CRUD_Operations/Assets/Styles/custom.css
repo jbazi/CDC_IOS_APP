@@ -1,0 +1,14 @@
+﻿.btn_editEmployee {
+    background-color: #d17d44;
+    color: #e3e0c6;
+}
+
+.btn_deleteEmployee {
+    background-color: #aa4156;
+    color: #f4f7f6;
+}
+
+button {
+    background-color: #aa4156;
+    color: #f4f7f6;
+}
